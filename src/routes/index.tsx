@@ -52,11 +52,10 @@ const why = [
 ];
 
 const steps = [
-  { n: "01", t: "Career Counselling", d: "Understand your interests, strengths and career goals." },
-  { n: "02", t: "Course Selection", d: "Match the right course to your aptitude and aspirations." },
-  { n: "03", t: "College Shortlisting", d: "A focused list based on score, budget and preference." },
-  { n: "04", t: "Documentation Support", d: "We help you prepare and verify all required documents." },
-  { n: "05", t: "Admission Guidance", d: "Confirm your seat with confidence and clarity." },
+  { icon: Users, t: "Career Counselling", d: "Understanding your profile, interests, and future goals", color: "#14B8A6" },
+  { icon: GraduationCap, t: "Course & College Selection", d: "Shortlisting the best-fit options for you", color: "#4F46E5" },
+  { icon: ClipboardList, t: "Application & Documentation", d: "End-to-end support with forms and paperwork", color: "#DC2626" },
+  { icon: CheckCircle2, t: "Admission Confirmation", d: "Finalizing your admission and guiding you through reporting", color: "#0F766E" },
 ];
 
 const testimonials = [
@@ -252,20 +251,30 @@ function HomePage() {
       {/* PROCESS */}
       <section className="py-20">
         <div className="container mx-auto max-w-7xl px-4">
-          <SectionHeading eyebrow="Our Process" title={<>A simple, <span className="text-gradient-gold">5-step admission journey</span></>} />
-          <div className="relative">
-            <div className="hidden lg:block absolute top-12 left-[10%] right-[10%] h-px bg-gradient-to-r from-transparent via-gold to-transparent" />
-            <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
-              {steps.map((s, i) => (
-                <div key={s.n} className="relative text-center animate-fade-up" style={{ animationDelay: `${i * 80}ms` }}>
-                  <div className="mx-auto h-24 w-24 rounded-full bg-gradient-primary grid place-items-center shadow-elegant relative z-10">
-                    <span className="font-display text-2xl text-primary-foreground">{s.n}</span>
+          <SectionHeading eyebrow="Our Process" title={<>A simple, structured approach to your <span className="text-gradient-gold">admission journey</span></>} />
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-3 items-stretch">
+            {steps.map((s, i) => (
+              <div key={s.t} className="relative flex items-stretch animate-fade-up" style={{ animationDelay: `${i * 100}ms` }}>
+                <div
+                  className="flex-1 rounded-3xl bg-card p-6 text-center shadow-soft hover:shadow-elegant transition-all hover:-translate-y-1 border-2"
+                  style={{ borderColor: s.color }}
+                >
+                  <div
+                    className="mx-auto h-14 w-14 rounded-2xl grid place-items-center mb-4"
+                    style={{ backgroundColor: `${s.color}1A`, color: s.color }}
+                  >
+                    <s.icon className="h-7 w-7" strokeWidth={1.75} />
                   </div>
-                  <h3 className="font-display text-lg text-navy mt-4 mb-1">{s.t}</h3>
-                  <p className="text-sm text-muted-foreground">{s.d}</p>
+                  <h3 className="font-display text-lg font-bold mb-2" style={{ color: s.color }}>{s.t}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{s.d}</p>
                 </div>
-              ))}
-            </div>
+                {i < steps.length - 1 && (
+                  <div className="hidden lg:flex items-center justify-center px-1 shrink-0" aria-hidden>
+                    <ArrowRight className="h-7 w-7" style={{ color: s.color, opacity: 0.7 }} />
+                  </div>
+                )}
+              </div>
+            ))}
           </div>
         </div>
       </section>
