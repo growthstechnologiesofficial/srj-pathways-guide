@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { ArrowUp, MessageCircle } from "lucide-react";
+import { ArrowUp } from "lucide-react";
+import whatsappIcon from "@/assets/whatsapp.png";
 
 export function FloatingActions() {
   const [show, setShow] = useState(false);
@@ -16,9 +17,9 @@ export function FloatingActions() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat on WhatsApp"
-        className="h-14 w-14 grid place-items-center rounded-full bg-[#25D366] text-white shadow-elegant hover:scale-110 transition-transform animate-float"
+        className="block h-14 w-14 rounded-full shadow-elegant hover:scale-110 transition-transform animate-float"
       >
-        <MessageCircle className="h-6 w-6" />
+        <img src={whatsappIcon} alt="WhatsApp" className="h-14 w-14 rounded-full" />
       </a>
       {show && (
         <button
