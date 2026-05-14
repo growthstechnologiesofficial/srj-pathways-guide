@@ -320,7 +320,7 @@ function HomePage() {
       {/* CTA */}
       <section className="py-16">
         <div className="container mx-auto max-w-6xl px-4">
-          <div className="relative overflow-hidden rounded-3xl bg-gradient-primary p-10 md:p-16 shadow-elegant">
+          <div className="relative overflow-hidden rounded-3xl bg-gradient-navy p-10 md:p-16 shadow-elegant">
             <div className="absolute -top-24 -right-24 h-80 w-80 rounded-full bg-gold/30 blur-3xl" />
             <div className="absolute -bottom-24 -left-24 h-80 w-80 rounded-full bg-white/10 blur-3xl" />
             <div className="relative grid md:grid-cols-[1fr_auto] gap-8 items-center">
