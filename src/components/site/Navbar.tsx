@@ -29,12 +29,7 @@ export function Navbar() {
   useEffect(() => setOpen(false), [path]);
 
   return (
-    <header
-      className={cn(
-        "fixed top-0 inset-x-0 z-50 transition-all duration-300",
-        scrolled ? "glass shadow-soft py-2" : "bg-transparent py-4"
-      )}
-    >
+    <header className="fixed top-0 inset-x-0 z-50 glass shadow-soft py-2">
       <div className="container mx-auto max-w-7xl px-4 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2 group">
           <div className="h-10 w-10 rounded-xl bg-gradient-primary grid place-items-center shadow-soft">
