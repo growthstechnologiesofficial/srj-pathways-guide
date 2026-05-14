@@ -13,7 +13,7 @@ export function Footer() {
             </div>
             <div>
               <div className="font-display text-lg font-bold">SRJ Education</div>
-              <div className="text-[10px] uppercase tracking-[0.18em] text-gold font-semibold">Consultancy</div>
+              <div className="font-display text-lg font-bold">Consultancy</div>
             </div>
           </div>
           <p className="text-sm text-primary-foreground/70 leading-relaxed">
