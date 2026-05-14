@@ -49,10 +49,10 @@ export function Navbar() {
                 key={l.to}
                 to={l.to}
                 className={cn(
-                  "px-4 py-2 rounded-full text-sm font-medium transition-colors",
+                  "px-4 py-2 rounded-full text-sm font-semibold transition-colors",
                   active
                     ? "text-navy bg-accent"
-                    : "text-foreground/70 hover:text-navy hover:bg-accent/60"
+                    : "text-navy/80 hover:text-navy hover:bg-accent/60"
                 )}
               >
                 {l.label}
