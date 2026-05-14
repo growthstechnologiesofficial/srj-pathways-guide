@@ -61,7 +61,7 @@ function ContactPage() {
         <div className="container mx-auto max-w-7xl px-4 grid lg:grid-cols-3 gap-6">
           {[
             { icon: MapPin, t: "Visit Us", d: "Office No. 10, 7th Floor, City Vista Business Park, Downtown Road, Kharadi, Pune – 411014" },
-            { icon: Phone, t: "Call Us", d: "+91 90672 58278", href: "tel:+919067258278" },
+            { icon: Phone, t: "Call Us", d: "+91 92723 24562", href: "tel:+919272324562" },
             { icon: Mail, t: "Email Us", d: "info@srjeducationconsultancy.in", href: "mailto:info@srjeducationconsultancy.in" },
           ].map((c) => (
             <Card key={c.t} className="p-7 rounded-2xl border-0 shadow-soft bg-card">

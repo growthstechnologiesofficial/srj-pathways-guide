@@ -71,7 +71,7 @@ const faqs = [
   { q: "Do you help with direct admissions?", a: "Yes. We provide ethical, transparent guidance for direct and management quota admissions in select colleges." },
   { q: "Which colleges do you work with?", a: "We have a strong network across Pune and Maharashtra including reputed engineering, pharmacy, medical and B-schools." },
   { q: "Is counselling available online?", a: "Absolutely. You can choose online or in-person sessions at our Kharadi, Pune office." },
-  { q: "How can students contact SRJ Education Consultancy?", a: "Call +91 90672 58278, email info@srjeducationconsultancy.in or use the enquiry form on the Counselling page." },
+  { q: "How can students contact SRJ Education Consultancy?", a: "Call +91 92723 24562, email info@srjeducationconsultancy.in or use the enquiry form on the Counselling page." },
 ];
 
 function HomePage() {
@@ -358,7 +358,7 @@ function HomePage() {
               </div>
               <div className="flex flex-col sm:flex-row gap-3 w-full">
                 <Button asChild size="lg" className="w-full sm:w-auto bg-primary text-primary-foreground rounded-full font-semibold hover:bg-primary/90">
-                  <a href="tel:+919067258278"><Phone className="mr-2 h-4 w-4" /> Call Now</a>
+                  <a href="tel:+919272324562"><Phone className="mr-2 h-4 w-4" /> Call Now</a>
                 </Button>
                 <Button asChild size="lg" className="w-full sm:w-auto bg-primary text-primary-foreground rounded-full font-semibold hover:bg-primary/90">
                   <Link to="/counselling"><Calendar className="mr-2 h-4 w-4" /> Book Free Counselling</Link>
