@@ -83,26 +83,21 @@ function HomePage() {
         <div className="absolute -bottom-12 -left-12 h-80 w-80 rounded-full bg-navy/5 blur-3xl" />
         <div className="container mx-auto max-w-7xl px-4 grid lg:grid-cols-2 gap-16 items-center relative">
           <div className="flex flex-col gap-8 animate-fade-up">
-            <div className="inline-flex items-center gap-2 w-fit px-4 py-1.5 rounded-full bg-card border border-border shadow-soft">
-              <span className="flex h-2 w-2 rounded-full bg-primary animate-pulse" />
-              <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-muted-foreground">Trusted by 5,000+ Students in Maharashtra</span>
-            </div>
-
             <div className="space-y-4">
-              <h1 className="font-display text-5xl lg:text-7xl font-extrabold text-navy leading-[1.05] tracking-tight">
+              <h1 className="font-display text-4xl sm:text-5xl lg:text-7xl font-extrabold text-navy leading-[1.05] tracking-tight">
                 Build Your Career With <span className="text-primary">Expert</span>
                 <span className="block mt-2 italic font-medium text-navy/90">Educational Guidance</span>
               </h1>
-              <p className="text-lg text-muted-foreground leading-relaxed max-w-xl">
+              <p className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-xl">
                 We help students choose the right course, college and career path through data-driven professional counselling and end-to-end admission guidance.
               </p>
             </div>
 
-            <div className="flex flex-row gap-3">
-              <Button asChild size="lg" className="flex-1 sm:flex-none bg-primary text-primary-foreground hover:bg-primary/90 hover:-translate-y-0.5 transition-all rounded-xl shadow-elegant font-bold">
+            <div className="flex flex-col sm:flex-row gap-3 w-full">
+              <Button asChild size="lg" className="w-full sm:w-auto bg-primary text-primary-foreground hover:bg-primary/90 hover:-translate-y-0.5 transition-all rounded-xl shadow-elegant font-bold">
                 <Link to="/counselling">Book Free Counselling <ArrowRight className="ml-2 h-4 w-4" /></Link>
               </Button>
-              <Button asChild size="lg" className="flex-1 sm:flex-none bg-primary text-primary-foreground hover:bg-primary/90 rounded-xl font-bold shadow-elegant">
+              <Button asChild size="lg" className="w-full sm:w-auto bg-primary text-primary-foreground hover:bg-primary/90 rounded-xl font-bold shadow-elegant">
                 <Link to="/courses">Explore Courses</Link>
               </Button>
             </div>
