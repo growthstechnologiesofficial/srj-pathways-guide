@@ -125,10 +125,10 @@ function AboutPage() {
 
       <section className="py-16">
         <div className="container mx-auto max-w-5xl px-4">
-          <div className="rounded-3xl bg-gradient-primary p-10 md:p-14 text-center shadow-elegant">
+          <div className="rounded-3xl bg-gradient-navy p-10 md:p-14 text-center shadow-elegant">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-primary-foreground">Ready to plan your future with us?</h2>
             <p className="mt-3 text-primary-foreground/80">Book a free counselling session and meet our team.</p>
-            <Button asChild size="lg" className="mt-6 bg-gradient-gold text-navy rounded-full font-semibold">
+            <Button asChild size="lg" className="mt-6 bg-gradient-primary text-primary-foreground rounded-full font-semibold">
               <Link to="/counselling">Book Free Counselling <ArrowRight className="ml-2 h-4 w-4" /></Link>
             </Button>
           </div>
