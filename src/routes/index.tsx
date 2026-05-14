@@ -78,68 +78,84 @@ function HomePage() {
   return (
     <>
       {/* HERO */}
-      <section className="relative pt-32 md:pt-40 pb-20 bg-gradient-hero overflow-hidden">
-        <div className="absolute top-20 -left-20 h-72 w-72 rounded-full bg-gold/25 blur-3xl animate-blob" />
-        <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-primary/20 blur-3xl animate-blob" />
-        <div className="container mx-auto max-w-7xl px-4 grid lg:grid-cols-2 gap-12 items-center relative">
-          <div className="animate-fade-up">
-            <div className="inline-flex items-center gap-2 mb-5 px-3 py-1 rounded-full bg-white/70 backdrop-blur text-navy text-xs font-semibold uppercase tracking-wider shadow-soft">
-              <Sparkles className="h-3.5 w-3.5 text-gold" /> Trusted by 5,000+ students in Maharashtra
+      <section className="relative pt-32 md:pt-36 pb-24 bg-secondary/40 overflow-hidden">
+        <div className="absolute -top-12 -right-12 h-80 w-80 rounded-full bg-primary/10 blur-3xl" />
+        <div className="absolute -bottom-12 -left-12 h-80 w-80 rounded-full bg-navy/5 blur-3xl" />
+        <div className="container mx-auto max-w-7xl px-4 grid lg:grid-cols-2 gap-16 items-center relative">
+          <div className="flex flex-col gap-8 animate-fade-up">
+            <div className="inline-flex items-center gap-2 w-fit px-4 py-1.5 rounded-full bg-card border border-border shadow-soft">
+              <span className="flex h-2 w-2 rounded-full bg-primary animate-pulse" />
+              <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-muted-foreground">Trusted by 5,000+ Students in Maharashtra</span>
             </div>
-            <h1 className="font-display text-4xl md:text-6xl font-bold text-navy leading-[1.05]">
-              Build Your Career With <span className="text-gradient-gold">Expert Educational Guidance</span>
-            </h1>
-            <p className="mt-5 text-lg text-muted-foreground max-w-xl">
-              We help students choose the right course, college and career path through professional counselling and admission guidance.
-            </p>
-            <div className="mt-7 flex flex-wrap gap-3">
-              <Button asChild size="lg" className="bg-gradient-primary text-primary-foreground rounded-full shadow-soft hover:shadow-elegant">
-                <Link to="/counselling"><Calendar className="mr-2 h-4 w-4" /> Book Free Counselling</Link>
+
+            <div className="space-y-4">
+              <h1 className="font-display text-5xl lg:text-7xl font-extrabold text-navy leading-[1.05] tracking-tight">
+                Build Your Career With <span className="text-primary">Expert</span>
+                <span className="block mt-2 italic font-medium text-navy/90">Educational Guidance</span>
+              </h1>
+              <p className="text-lg text-muted-foreground leading-relaxed max-w-xl">
+                We help students choose the right course, college and career path through data-driven professional counselling and end-to-end admission guidance.
+              </p>
+            </div>
+
+            <div className="flex flex-wrap gap-4">
+              <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 hover:-translate-y-0.5 transition-all rounded-xl shadow-elegant font-bold">
+                <Link to="/counselling">Book Free Counselling <ArrowRight className="ml-2 h-4 w-4" /></Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="rounded-full border-navy/20 text-navy hover:bg-accent">
-                <Link to="/courses">Explore Courses <ArrowRight className="ml-2 h-4 w-4" /></Link>
+              <Button asChild size="lg" variant="outline" className="bg-card text-navy border-border hover:bg-secondary rounded-xl font-bold">
+                <Link to="/courses">Explore Courses</Link>
               </Button>
             </div>
 
-            <div className="mt-10 grid grid-cols-3 gap-6">
+            <div className="grid grid-cols-3 pt-8 border-t border-border">
               {[
-                { v: 100, s: "+", l: "Students Guided" },
-                { v: 98, s: "%", l: "Success Rate" },
-                { v: 2, s: "+", l: "Years Experience" },
+                { v: 100, s: "+", l: "Students Guided", divider: false },
+                { v: 98, s: "%", l: "Success Rate", divider: true },
+                { v: 2, s: "+", l: "Years Experience", divider: false },
               ].map((c) => (
-                <div key={c.l}>
-                  <div className="font-display text-3xl font-bold text-navy">
+                <div key={c.l} className={c.divider ? "border-x border-border px-6" : "px-2"}>
+                  <div className="font-display text-3xl font-extrabold text-navy">
                     <Counter to={c.v} suffix={c.s} />
                   </div>
-                  <div className="text-xs text-muted-foreground mt-1">{c.l}</div>
+                  <div className="text-[11px] font-bold text-muted-foreground uppercase tracking-wider mt-1">{c.l}</div>
                 </div>
               ))}
             </div>
           </div>
 
           <div className="relative animate-fade-up" style={{ animationDelay: "150ms" }}>
-            <div className="absolute -inset-6 bg-gradient-gold opacity-20 blur-3xl rounded-full" />
-            <div className="relative rounded-3xl overflow-hidden glass shadow-elegant p-3">
-              <img
-                src={heroImg}
-                alt="Indian college students with laptops smiling"
-                width={1600}
-                height={1200}
-                className="rounded-2xl w-full h-auto object-cover"
-              />
-            </div>
-            <div className="hidden md:flex absolute -left-6 top-10 glass rounded-2xl p-4 shadow-soft items-center gap-3 animate-float">
-              <div className="h-10 w-10 rounded-full bg-gradient-gold grid place-items-center"><Trophy className="h-5 w-5 text-navy" /></div>
-              <div>
-                <div className="text-xs text-muted-foreground">Admission Success</div>
-                <div className="font-bold text-navy">98% Confirmed</div>
+            <div className="absolute -top-12 -right-12 w-64 h-64 bg-primary/10 rounded-full blur-3xl" />
+            <div className="absolute -bottom-12 -left-12 w-64 h-64 bg-navy/10 rounded-full blur-3xl" />
+
+            <div className="relative z-10 p-4 bg-card rounded-[2.5rem] shadow-elegant border border-border">
+              <div className="rounded-[2rem] overflow-hidden bg-secondary aspect-[5/4]">
+                <img
+                  src={heroImg}
+                  alt="Indian college students with laptops smiling"
+                  width={1600}
+                  height={1280}
+                  className="w-full h-full object-cover"
+                />
               </div>
-            </div>
-            <div className="hidden md:flex absolute -right-6 bottom-10 glass rounded-2xl p-4 shadow-soft items-center gap-3 animate-float" style={{ animationDelay: "1.5s" }}>
-              <div className="h-10 w-10 rounded-full bg-gradient-primary grid place-items-center"><GraduationCap className="h-5 w-5 text-primary-foreground" /></div>
-              <div>
-                <div className="text-xs text-muted-foreground">Expert Counsellors</div>
-                <div className="font-bold text-navy">15+ Mentors</div>
+
+              <div className="hidden md:flex absolute -top-6 -left-8 bg-card/90 backdrop-blur-xl p-5 rounded-2xl shadow-elegant border border-border items-center gap-4">
+                <div className="w-12 h-12 rounded-full bg-primary/10 grid place-items-center">
+                  <Trophy className="h-6 w-6 text-primary" />
+                </div>
+                <div>
+                  <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-widest">Admission Status</p>
+                  <p className="text-lg font-extrabold text-navy">98% Confirmed</p>
+                </div>
+              </div>
+
+              <div className="hidden md:flex absolute -bottom-4 -right-8 bg-navy/95 backdrop-blur-xl p-5 rounded-2xl shadow-elegant items-center gap-4">
+                <div className="w-12 h-12 rounded-full bg-primary grid place-items-center shadow-soft">
+                  <GraduationCap className="h-6 w-6 text-primary-foreground" />
+                </div>
+                <div>
+                  <p className="text-[10px] font-bold text-white/60 uppercase tracking-widest">Premium Access</p>
+                  <p className="text-lg font-extrabold text-white">15+ Top Mentors</p>
+                </div>
               </div>
             </div>
           </div>
