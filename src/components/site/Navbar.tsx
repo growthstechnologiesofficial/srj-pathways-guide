@@ -62,8 +62,8 @@ export function Navbar() {
         </nav>
 
         <div className="hidden md:flex items-center gap-2">
-          <a href="tel:+919067258278" className="text-sm font-semibold text-navy flex items-center gap-2">
-            <Phone className="h-4 w-4 text-gold" /> +91 90672 58278
+          <a href="tel:+919272324562" className="text-sm font-semibold text-navy flex items-center gap-2">
+            <Phone className="h-4 w-4 text-gold" /> +91 92723 24562
           </a>
           <Button asChild className="bg-gradient-primary text-primary-foreground hover:opacity-90 rounded-full shadow-soft">
             <Link to="/counselling">Book Free Counselling</Link>

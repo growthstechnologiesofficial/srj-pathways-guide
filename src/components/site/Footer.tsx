@@ -58,7 +58,7 @@ export function Footer() {
           <h4 className="font-display text-base mb-4 text-gold">Get in Touch</h4>
           <ul className="space-y-3 text-sm text-primary-foreground/80">
             <li className="flex gap-3"><MapPin className="h-4 w-4 text-gold shrink-0 mt-0.5" /> Office No. 10, 7th Floor, City Vista Business Park, Downtown Road, Kharadi, Pune – 411014</li>
-            <li className="flex gap-3"><Phone className="h-4 w-4 text-gold shrink-0 mt-0.5" /> <a href="tel:+919067258278">+91 90672 58278</a></li>
+            <li className="flex gap-3"><Phone className="h-4 w-4 text-gold shrink-0 mt-0.5" /> <a href="tel:+919272324562">+91 92723 24562</a></li>
             <li className="flex gap-3"><Mail className="h-4 w-4 text-gold shrink-0 mt-0.5" /> <a href="mailto:info@srjeducationconsultancy.in">info@srjeducationconsultancy.in</a></li>
           </ul>
         </div>
