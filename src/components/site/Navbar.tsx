@@ -86,7 +86,7 @@ export function Navbar() {
               <Link
                 key={l.to}
                 to={l.to}
-                className="px-4 py-3 rounded-lg text-sm font-medium text-foreground hover:bg-accent"
+                className="px-4 py-3 rounded-lg text-sm font-semibold text-navy hover:bg-accent"
               >
                 {l.label}
               </Link>
