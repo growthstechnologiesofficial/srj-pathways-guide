@@ -6,6 +6,12 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Eye, HeartHandshake, ShieldCheck, Sparkles, ArrowRight, User } from "lucide-react";
 import aboutImg from "@/assets/about-office.jpg";
+import sunilImg from "@/assets/team/sunil-jadhav.png";
+import sanjayImg from "@/assets/team/sanjay-patil.png";
+import priyaImg from "@/assets/team/priya-kulkarni.png";
+import nehaImg from "@/assets/team/neha-joshi.png";
+import priyankaImg from "@/assets/team/priyanka-sharma.png";
+import rahulImg from "@/assets/team/rahul-deshmukh.jpg";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -20,14 +26,14 @@ export const Route = createFileRoute("/about")({
   component: AboutPage,
 });
 
-const team = [
-  { name: "Sunil Jadhav", role: "Founder & CEO" },
-  { name: "Sanjay Patil", role: "Co-Founder & Senior Career Counsellor" },
-  { name: "Priya Kulkarni", role: "Admission Guidance Specialist" },
-  { name: "Neha Joshi", role: "Career Counsellor" },
-  { name: "Priyanka Sharma", role: "Course & College Advisor" },
+const team: { name: string; role: string; img?: string }[] = [
+  { name: "Sunil Jadhav", role: "Founder & CEO", img: sunilImg },
+  { name: "Sanjay Patil", role: "Co-Founder & Senior Career Counsellor", img: sanjayImg },
+  { name: "Priya Kulkarni", role: "Admission Guidance Specialist", img: priyaImg },
+  { name: "Neha Joshi", role: "Career Counsellor", img: nehaImg },
+  { name: "Priyanka Sharma", role: "Course & College Advisor", img: priyankaImg },
   { name: "Rohit Shinde", role: "Career Guidance Specialist" },
-  { name: "Rahul Deshmukh", role: "Sales & Marketing Manager" },
+  { name: "Rahul Deshmukh", role: "Sales & Marketing Manager", img: rahulImg },
 ];
 
 function AboutPage() {
@@ -88,8 +94,8 @@ function AboutPage() {
         <div className="container mx-auto max-w-6xl px-4">
           <SectionHeading eyebrow="Founder" title={<>A message from our <span className="text-gradient-gold">founder</span></>} />
           <Card className="p-8 md:p-12 rounded-3xl border-0 shadow-elegant bg-card grid md:grid-cols-[200px_1fr] gap-8 items-center">
-            <div className="mx-auto md:mx-0 h-44 w-44 rounded-full bg-gradient-primary grid place-items-center shadow-soft border-4 border-gold/30">
-              <User className="h-20 w-20 text-primary-foreground/60" />
+            <div className="mx-auto md:mx-0 h-44 w-44 rounded-full overflow-hidden shadow-soft border-4 border-gold/30">
+              <img src={sunilImg} alt="Sunil Jadhav, Founder & CEO of SRJ Education Consultancy" loading="lazy" width={400} height={400} className="w-full h-full object-cover" />
             </div>
             <div>
               <Sparkles className="h-6 w-6 text-gold mb-3" />
@@ -112,8 +118,12 @@ function AboutPage() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {team.map((m) => (
               <Card key={m.name} className="p-6 rounded-2xl border-0 shadow-soft bg-card text-center hover:shadow-elegant transition-all hover:-translate-y-1">
-                <div className="mx-auto h-28 w-28 rounded-full bg-gradient-to-br from-secondary to-accent grid place-items-center mb-4 border-4 border-gold/20">
-                  <User className="h-12 w-12 text-navy/30" />
+                <div className="mx-auto h-28 w-28 rounded-full overflow-hidden mb-4 border-4 border-gold/20 bg-gradient-to-br from-secondary to-accent grid place-items-center">
+                  {m.img ? (
+                    <img src={m.img} alt={`${m.name}, ${m.role}`} loading="lazy" width={224} height={224} className="w-full h-full object-cover" />
+                  ) : (
+                    <User className="h-12 w-12 text-navy/30" />
+                  )}
                 </div>
                 <h3 className="font-display text-lg text-navy">{m.name}</h3>
                 <p className="text-sm text-gold font-medium mt-1">{m.role}</p>
