@@ -98,11 +98,11 @@ function HomePage() {
               </p>
             </div>
 
-            <div className="flex flex-wrap gap-4">
-              <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 hover:-translate-y-0.5 transition-all rounded-xl shadow-elegant font-bold">
+            <div className="flex flex-row gap-3">
+              <Button asChild size="lg" className="flex-1 sm:flex-none bg-primary text-primary-foreground hover:bg-primary/90 hover:-translate-y-0.5 transition-all rounded-xl shadow-elegant font-bold">
                 <Link to="/counselling">Book Free Counselling <ArrowRight className="ml-2 h-4 w-4" /></Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="bg-card text-navy border-border hover:bg-secondary rounded-xl font-bold">
+              <Button asChild size="lg" className="flex-1 sm:flex-none bg-primary text-primary-foreground hover:bg-primary/90 rounded-xl font-bold shadow-elegant">
                 <Link to="/courses">Explore Courses</Link>
               </Button>
             </div>
@@ -361,11 +361,11 @@ function HomePage() {
                   <CheckCircle2 className="h-4 w-4" /> Free first session
                 </div>
               </div>
-              <div className="flex flex-wrap gap-3">
-                <Button asChild size="lg" className="bg-gradient-primary text-primary-foreground rounded-full font-semibold hover:opacity-90">
+              <div className="flex flex-row gap-3">
+                <Button asChild size="lg" className="flex-1 md:flex-none bg-primary text-primary-foreground rounded-full font-semibold hover:bg-primary/90">
                   <a href="tel:+919067258278"><Phone className="mr-2 h-4 w-4" /> Call Now</a>
                 </Button>
-                <Button asChild size="lg" variant="outline" className="rounded-full border-white/30 text-primary-foreground hover:bg-white/10 hover:text-primary-foreground">
+                <Button asChild size="lg" className="flex-1 md:flex-none bg-primary text-primary-foreground rounded-full font-semibold hover:bg-primary/90">
                   <Link to="/counselling"><Calendar className="mr-2 h-4 w-4" /> Book Free Counselling</Link>
                 </Button>
               </div>
