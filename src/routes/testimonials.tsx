@@ -3,7 +3,7 @@ import { PageHero } from "@/components/site/PageHero";
 import { SectionHeading } from "@/components/site/SectionHeading";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Star, Quote, PlayCircle, ArrowRight } from "lucide-react";
+import { Star, Quote, ArrowRight } from "lucide-react";
 
 export const Route = createFileRoute("/testimonials")({
   head: () => ({
@@ -59,26 +59,6 @@ function TestimonialsPage() {
         title={<>Trusted by <span className="text-gradient-gold">thousands of students</span></>}
         subtitle="Honest reviews from students and parents whose journeys we've had the privilege to be part of."
       />
-
-      {/* Video testimonials placeholder */}
-      <section className="py-16">
-        <div className="container mx-auto max-w-7xl px-4">
-          <SectionHeading eyebrow="Video Stories" title={<>Watch their <span className="text-gradient-gold">success journeys</span></>} />
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[1, 2, 3].map((i) => (
-              <div key={i} className="aspect-video rounded-2xl bg-gradient-primary relative overflow-hidden group cursor-pointer shadow-soft">
-                <div className="absolute inset-0 grid place-items-center">
-                  <PlayCircle className="h-16 w-16 text-gold group-hover:scale-110 transition-transform" />
-                </div>
-                <div className="absolute bottom-3 left-4 right-4 text-primary-foreground">
-                  <div className="text-sm font-semibold">Student Success Story #{i}</div>
-                  <div className="text-xs opacity-70">Coming soon</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       <section className="py-16 bg-secondary/40">
         <div className="container mx-auto max-w-7xl px-4">
