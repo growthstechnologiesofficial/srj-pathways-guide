@@ -1,14 +1,15 @@
 import { Link } from "@tanstack/react-router";
-import { GraduationCap, MapPin, Phone, Mail, Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
+import { MapPin, Phone, Mail, Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
+import logo from "@/assets/srj-logo.png";
 
 export function Footer() {
   return (
     <footer className="bg-navy text-primary-foreground mt-24">
       <div className="container mx-auto max-w-7xl px-4 py-16 grid gap-10 md:grid-cols-2 lg:grid-cols-4">
         <div>
-          <div className="flex items-center gap-2 mb-4">
-            <div className="h-10 w-10 rounded-xl bg-gradient-gold grid place-items-center">
-              <GraduationCap className="h-5 w-5 text-navy" />
+          <div className="flex items-center gap-3 mb-4">
+            <div className="h-12 w-12 rounded-xl bg-white grid place-items-center p-1.5">
+              <img src={logo} alt="SRJ Education Consultancy logo" className="h-full w-full object-contain" />
             </div>
             <div>
               <div className="font-display text-lg font-bold">SRJ Education</div>

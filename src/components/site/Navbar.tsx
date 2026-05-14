@@ -1,8 +1,9 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { Menu, X, GraduationCap, Phone } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import logo from "@/assets/srj-logo.png";
 
 const links = [
   { to: "/", label: "Home" },
@@ -31,10 +32,8 @@ export function Navbar() {
   return (
     <header className="fixed top-0 inset-x-0 z-50 glass shadow-soft py-2">
       <div className="container mx-auto max-w-7xl px-4 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-2 group">
-          <div className="h-10 w-10 rounded-xl bg-gradient-primary grid place-items-center shadow-soft">
-            <GraduationCap className="h-5 w-5 text-primary-foreground" />
-          </div>
+        <Link to="/" className="flex items-center gap-3 group">
+          <img src={logo} alt="SRJ Education Consultancy logo" className="h-12 w-12 object-contain" />
           <div className="leading-tight">
             <div className="font-display text-lg font-bold text-navy">SRJ Education</div>
             <div className="text-[10px] uppercase tracking-[0.18em] text-gold font-semibold">Consultancy</div>
