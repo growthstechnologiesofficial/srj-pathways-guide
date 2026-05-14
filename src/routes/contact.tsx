@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { MapPin, Phone, Mail, Clock, Send, MessageCircle } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
 import { toast } from "sonner";
 import { z } from "zod";
 
@@ -108,33 +108,24 @@ function ContactPage() {
           </Card>
 
           <div className="space-y-6">
-            <Card className="p-7 rounded-3xl border-0 shadow-soft bg-card">
-              <div className="flex items-start gap-3">
-                <div className="h-12 w-12 rounded-2xl bg-gradient-gold grid place-items-center"><Clock className="h-5 w-5 text-navy" /></div>
-                <div>
-                  <h3 className="font-display text-lg text-navy mb-2">Business Hours</h3>
-                  <ul className="text-sm text-muted-foreground space-y-1">
-                    <li className="flex justify-between"><span>Monday — Saturday</span><span className="font-semibold text-navy">10:00 AM — 7:00 PM</span></li>
-                    <li className="flex justify-between"><span>Sunday</span><span className="font-semibold text-navy">By Appointment</span></li>
+            <Card className="p-6 sm:p-7 rounded-3xl border-0 shadow-soft bg-card">
+              <div className="flex items-start gap-3 sm:gap-4">
+                <div className="h-12 w-12 shrink-0 rounded-2xl bg-gradient-gold grid place-items-center"><Clock className="h-5 w-5 text-navy" /></div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="font-display text-lg text-navy mb-3">Business Hours</h3>
+                  <ul className="text-sm space-y-2.5">
+                    <li className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-0.5 sm:gap-3 pb-2.5 border-b border-border">
+                      <span className="text-muted-foreground">Monday — Saturday</span>
+                      <span className="font-semibold text-navy whitespace-nowrap">10:00 AM — 7:00 PM</span>
+                    </li>
+                    <li className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-0.5 sm:gap-3">
+                      <span className="text-muted-foreground">Sunday</span>
+                      <span className="font-semibold text-navy whitespace-nowrap">By Appointment</span>
+                    </li>
                   </ul>
                 </div>
               </div>
             </Card>
-
-            <a
-              href="https://wa.me/919067258278"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block p-6 rounded-3xl bg-[#25D366] text-white shadow-soft hover:shadow-elegant transition-all hover:-translate-y-0.5"
-            >
-              <div className="flex items-center gap-4">
-                <div className="h-12 w-12 rounded-2xl bg-white/20 grid place-items-center"><MessageCircle className="h-5 w-5" /></div>
-                <div>
-                  <div className="font-display text-lg">Chat on WhatsApp</div>
-                  <div className="text-sm opacity-90">Quick replies during business hours</div>
-                </div>
-              </div>
-            </a>
 
             <Card className="overflow-hidden rounded-3xl border-0 shadow-soft p-0">
               <iframe
