@@ -36,7 +36,7 @@ export function Navbar() {
           <img src={logo} alt="SRJ Education Consultancy logo" className="h-12 w-12 object-contain" />
           <div className="leading-tight">
             <div className="font-display text-lg font-bold text-navy">SRJ Education</div>
-            <div className="text-[10px] uppercase tracking-[0.18em] text-gold font-semibold">Consultancy</div>
+            <div className="font-display text-lg font-bold text-navy">Consultancy</div>
           </div>
         </Link>
 
