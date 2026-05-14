@@ -52,11 +52,10 @@ const why = [
 ];
 
 const steps = [
-  { n: "01", t: "Career Counselling", d: "Understand your interests, strengths and career goals." },
-  { n: "02", t: "Course Selection", d: "Match the right course to your aptitude and aspirations." },
-  { n: "03", t: "College Shortlisting", d: "A focused list based on score, budget and preference." },
-  { n: "04", t: "Documentation Support", d: "We help you prepare and verify all required documents." },
-  { n: "05", t: "Admission Guidance", d: "Confirm your seat with confidence and clarity." },
+  { icon: Users, t: "Career Counselling", d: "Understanding your profile, interests, and future goals", color: "#14B8A6" },
+  { icon: GraduationCap, t: "Course & College Selection", d: "Shortlisting the best-fit options for you", color: "#4F46E5" },
+  { icon: ClipboardList, t: "Application & Documentation", d: "End-to-end support with forms and paperwork", color: "#DC2626" },
+  { icon: CheckCircle2, t: "Admission Confirmation", d: "Finalizing your admission and guiding you through reporting", color: "#0F766E" },
 ];
 
 const testimonials = [
