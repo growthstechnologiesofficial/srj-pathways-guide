@@ -102,12 +102,11 @@ function HomePage() {
               </Button>
             </div>
 
-            <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-6">
+            <div className="mt-10 grid grid-cols-3 gap-6">
               {[
-                { v: 5000, s: "+", l: "Students Guided" },
-                { v: 150, s: "+", l: "Colleges Connected" },
+                { v: 100, s: "+", l: "Students Guided" },
                 { v: 98, s: "%", l: "Success Rate" },
-                { v: 12, s: "+", l: "Years Experience" },
+                { v: 2, s: "+", l: "Years Experience" },
               ].map((c) => (
                 <div key={c.l}>
                   <div className="font-display text-3xl font-bold text-navy">
