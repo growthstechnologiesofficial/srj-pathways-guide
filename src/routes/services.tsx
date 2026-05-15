@@ -108,25 +108,6 @@ function ServicesPage() {
         subtitle="From your first counselling session to seat confirmation — SRJ delivers structured, transparent and personalised guidance at every step."
       />
 
-      {/* Trust Strip */}
-      <section className="py-12 border-b border-border/50 bg-card/30">
-        <div className="container mx-auto max-w-7xl px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {trustPoints.map((t) => (
-              <div key={t.title} className="flex items-start gap-3">
-                <div className="h-11 w-11 rounded-xl bg-gradient-primary grid place-items-center shrink-0 shadow-soft">
-                  <t.icon className="h-5 w-5 text-primary-foreground" />
-                </div>
-                <div>
-                  <div className="font-display text-base font-semibold text-navy">{t.title}</div>
-                  <p className="text-xs md:text-sm text-muted-foreground leading-relaxed mt-0.5">{t.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Services */}
       <section className="py-20">
         <div className="container mx-auto max-w-7xl px-4">
