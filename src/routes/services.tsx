@@ -96,7 +96,7 @@ const process = [
   { icon: PhoneCall, step: "01", title: "Connect", desc: "Book a free discovery call with our counsellor." },
   { icon: ClipboardList, step: "02", title: "Assess", desc: "Profile review, score analysis and goal mapping." },
   { icon: Search, step: "03", title: "Shortlist", desc: "Curated college and course recommendations." },
-  { icon: HandshakeIcon, step: "04", title: "Admission", desc: "End-to-end documentation and seat confirmation." },
+  { icon: Handshake, step: "04", title: "Admission", desc: "End-to-end documentation and seat confirmation." },
 ];
 
 function ServicesPage() {
