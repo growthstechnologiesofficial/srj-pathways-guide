@@ -18,7 +18,7 @@ import {
   PhoneCall,
   ClipboardList,
   Search,
-  HandshakeIcon,
+  Handshake,
 } from "lucide-react";
 
 export const Route = createFileRoute("/services")({
